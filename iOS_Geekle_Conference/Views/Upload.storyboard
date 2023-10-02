@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Upload View Controller-->
+        <scene sceneID="8p2-O0-sKL">
+            <objects>
+                <viewController storyboardIdentifier="UploadViewController" id="12w-Vf-6BC" customClass="UploadViewController" customModule="iOS_Geekle_Conference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l9D-by-fcJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q9I-NX-Y9B" customClass="CLDUIImageView" customModule="Cloudinary">
+                                <rect key="frame" x="16" y="125" width="361" height="615"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXC-pf-Zg5">
+                                <rect key="frame" x="16" y="43" width="40" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Uw-Hh3">
+                                        <rect key="frame" x="0.0" y="17" width="40" height="26.333333333333329"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ce3-Uw-Hh3" firstAttribute="height" secondItem="FXC-pf-Zg5" secondAttribute="height" multiplier="0.5" id="A9S-xw-319"/>
+                                    <constraint firstItem="ce3-Uw-Hh3" firstAttribute="width" secondItem="FXC-pf-Zg5" secondAttribute="width" id="Df8-7y-Vzf"/>
+                                    <constraint firstAttribute="width" secondItem="FXC-pf-Zg5" secondAttribute="height" multiplier="1:1.5" id="I1H-HO-fVA"/>
+                                    <constraint firstItem="ce3-Uw-Hh3" firstAttribute="centerY" secondItem="FXC-pf-Zg5" secondAttribute="centerY" id="UMS-G2-rLj"/>
+                                    <constraint firstAttribute="width" constant="40" id="Xsg-vV-9rj"/>
+                                    <constraint firstItem="ce3-Uw-Hh3" firstAttribute="centerX" secondItem="FXC-pf-Zg5" secondAttribute="centerX" id="hGz-y4-IYB"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ynr-KX-YAn">
+                                <rect key="frame" x="178" y="414" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JNg-cJ-UaC">
+                                <rect key="frame" x="96" y="371" width="200" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diZ-nZ-MXD">
+                                <rect key="frame" x="135" y="767" width="123" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Open Gallery"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="phL-8i-DUY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="phL-8i-DUY" firstAttribute="bottom" secondItem="diZ-nZ-MXD" secondAttribute="bottom" constant="16" id="BoH-tc-ctu"/>
+                            <constraint firstItem="diZ-nZ-MXD" firstAttribute="centerX" secondItem="phL-8i-DUY" secondAttribute="centerX" id="CHv-YW-lPc"/>
+                            <constraint firstItem="phL-8i-DUY" firstAttribute="bottom" secondItem="q9I-NX-Y9B" secondAttribute="bottom" constant="78" id="D3C-3P-TCM"/>
+                            <constraint firstItem="q9I-NX-Y9B" firstAttribute="leading" secondItem="phL-8i-DUY" secondAttribute="leading" constant="16" id="a7f-ne-NvB"/>
+                            <constraint firstItem="FXC-pf-Zg5" firstAttribute="leading" secondItem="phL-8i-DUY" secondAttribute="leading" constant="16" id="aQJ-dn-w6w"/>
+                            <constraint firstItem="phL-8i-DUY" firstAttribute="top" secondItem="FXC-pf-Zg5" secondAttribute="top" constant="16" id="dp1-0u-mec"/>
+                            <constraint firstItem="Ynr-KX-YAn" firstAttribute="centerX" secondItem="q9I-NX-Y9B" secondAttribute="centerX" id="hgi-5s-hWt"/>
+                            <constraint firstItem="Ynr-KX-YAn" firstAttribute="centerY" secondItem="q9I-NX-Y9B" secondAttribute="centerY" id="nmm-0Y-RVG"/>
+                            <constraint firstItem="phL-8i-DUY" firstAttribute="trailing" secondItem="q9I-NX-Y9B" secondAttribute="trailing" constant="16" id="pg4-Uk-gdg"/>
+                            <constraint firstItem="q9I-NX-Y9B" firstAttribute="top" secondItem="FXC-pf-Zg5" secondAttribute="bottom" constant="22" id="tmn-Bo-9DM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aiLoading" destination="Ynr-KX-YAn" id="nPT-Ez-d6U"/>
+                        <outlet property="btnOpenGallery" destination="diZ-nZ-MXD" id="cbO-m4-BaG"/>
+                        <outlet property="ivMain" destination="q9I-NX-Y9B" id="QF1-ei-xM7"/>
+                        <outlet property="vwBack" destination="FXC-pf-Zg5" id="AMd-ax-7MS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTo-aw-RlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-149"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

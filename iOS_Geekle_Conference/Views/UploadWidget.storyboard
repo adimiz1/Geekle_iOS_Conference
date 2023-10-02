@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Upload Widget View Controller-->
+        <scene sceneID="j6P-vh-mve">
+            <objects>
+                <viewController storyboardIdentifier="UploadWidgetViewController" id="61a-we-Len" customClass="UploadWidgetViewController" customModule="iOS_Geekle_Conference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YAM-rb-2xV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RUc-vV-RUa" customClass="CLDUIImageView" customModule="Cloudinary">
+                                <rect key="frame" x="16" y="125" width="361" height="615"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBo-Ve-uhC">
+                                <rect key="frame" x="16" y="43" width="40" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l7J-vB-DnL">
+                                        <rect key="frame" x="0.0" y="17" width="40" height="26.333333333333329"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="l7J-vB-DnL" firstAttribute="height" secondItem="eBo-Ve-uhC" secondAttribute="height" multiplier="0.5" id="2q3-9R-Z0U"/>
+                                    <constraint firstAttribute="width" constant="40" id="HlZ-BW-usw"/>
+                                    <constraint firstItem="l7J-vB-DnL" firstAttribute="centerX" secondItem="eBo-Ve-uhC" secondAttribute="centerX" id="fSR-oP-c8u"/>
+                                    <constraint firstAttribute="width" secondItem="eBo-Ve-uhC" secondAttribute="height" multiplier="1:1.5" id="gaE-kY-G8e"/>
+                                    <constraint firstItem="l7J-vB-DnL" firstAttribute="width" secondItem="eBo-Ve-uhC" secondAttribute="width" id="jbj-9h-nfB"/>
+                                    <constraint firstItem="l7J-vB-DnL" firstAttribute="centerY" secondItem="eBo-Ve-uhC" secondAttribute="centerY" id="zgm-ZB-xyG"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lQN-9R-yN8">
+                                <rect key="frame" x="178" y="414" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNh-g5-hIU">
+                                <rect key="frame" x="127.66666666666669" y="767" width="138" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload Widget"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jaN-Ub-16K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eBo-Ve-uhC" firstAttribute="leading" secondItem="jaN-Ub-16K" secondAttribute="leading" constant="16" id="5cB-fi-Dca"/>
+                            <constraint firstItem="jaN-Ub-16K" firstAttribute="top" secondItem="eBo-Ve-uhC" secondAttribute="top" constant="16" id="Bgh-VW-K4h"/>
+                            <constraint firstItem="lQN-9R-yN8" firstAttribute="centerY" secondItem="RUc-vV-RUa" secondAttribute="centerY" id="Ju7-u6-HK2"/>
+                            <constraint firstItem="RNh-g5-hIU" firstAttribute="centerX" secondItem="jaN-Ub-16K" secondAttribute="centerX" id="M4t-fi-tsf"/>
+                            <constraint firstItem="lQN-9R-yN8" firstAttribute="centerX" secondItem="RUc-vV-RUa" secondAttribute="centerX" id="Qbv-qM-mwT"/>
+                            <constraint firstItem="RUc-vV-RUa" firstAttribute="leading" secondItem="jaN-Ub-16K" secondAttribute="leading" constant="16" id="ToV-SC-x9t"/>
+                            <constraint firstItem="RUc-vV-RUa" firstAttribute="top" secondItem="eBo-Ve-uhC" secondAttribute="bottom" constant="22" id="VMr-Ys-xUZ"/>
+                            <constraint firstItem="jaN-Ub-16K" firstAttribute="bottom" secondItem="RUc-vV-RUa" secondAttribute="bottom" constant="78" id="VXK-vy-tkJ"/>
+                            <constraint firstItem="jaN-Ub-16K" firstAttribute="bottom" secondItem="RNh-g5-hIU" secondAttribute="bottom" constant="16" id="Xv1-s9-6fm"/>
+                            <constraint firstItem="jaN-Ub-16K" firstAttribute="trailing" secondItem="RUc-vV-RUa" secondAttribute="trailing" constant="16" id="lZf-vf-eEk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aiLoading" destination="lQN-9R-yN8" id="JCP-9C-KCC"/>
+                        <outlet property="btnUploadWidget" destination="RNh-g5-hIU" id="x7Y-Ln-bhM"/>
+                        <outlet property="ivMain" destination="RUc-vV-RUa" id="CfF-UB-DP2"/>
+                        <outlet property="vwBack" destination="eBo-Ve-uhC" id="i7y-1h-oic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJH-zu-4Fg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-149.29577464788733"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
