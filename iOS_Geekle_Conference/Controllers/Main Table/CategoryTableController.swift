@@ -44,7 +44,7 @@ class CategoryTableController: NSObject, UITableViewDelegate, UITableViewDataSou
         case 1:
             return 4
         case 2:
-            return 3
+            return 4
         default:
             return 0
         }
@@ -74,6 +74,8 @@ class CategoryTableController: NSObject, UITableViewDelegate, UITableViewDataSou
             cell.lbMain.text = "Image Widget"
         case IndexPath(row: 2, section: 2):
             cell.lbMain.text = "Video Player"
+        case IndexPath(row: 3, section: 2):
+            cell.lbMain.text = "Video Feed"
         default:
             cell.lbMain.text = ""
         }

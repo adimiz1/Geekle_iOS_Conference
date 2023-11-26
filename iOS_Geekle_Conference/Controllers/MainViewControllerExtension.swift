@@ -40,6 +40,9 @@ extension MainViewController: CategoryTableControllerDelegate {
         case IndexPath(row: 2, section: 2):
             let controller = UIStoryboard(name: "VideoWidget", bundle: nil).instantiateViewController(withIdentifier: "VideoWidgetViewController")
             goToController(controller: controller)
+        case IndexPath(row: 3, section: 2):
+            let controller = UIStoryboard(name: "VideoFeed", bundle: nil).instantiateViewController(withIdentifier: "VideoFeedController")
+            goToController(controller: controller)
         default:
            break
         }
