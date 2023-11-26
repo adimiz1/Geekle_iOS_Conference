@@ -16,3 +16,4 @@ The application has the following samples:
    1. Upload Widget
    2. Image Widget
    3. Video Widget   
+   4. Video Feed
